@@ -90,7 +90,8 @@ def menu_items():
                 print("You used a(n) " + item.name + ".")
                 print(item.use(vars.player))
                 break
-        goto_menu(menu_items)
+        if vars.player.items:
+            goto_menu(menu_items)
 
 def menu_settings():
     if not vars.instruct:

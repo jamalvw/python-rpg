@@ -85,6 +85,7 @@ def menu_items():
         for item in vars.player.items:
             if action == item.name.lower():
                 # Use then remove the item
+                vars.display = False
                 vars.player.items.remove(item)
                 print("You used a(n) " + item.name + ".")
                 print(item.use(vars.player))
